@@ -11,6 +11,11 @@
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/global.scss.css" rel="stylesheet">
+	<link href="css/menu.scss.css" rel="stylesheet">
+	<link href="css/site_temp.scss.css" rel="stylesheet">
+
+
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -21,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-
+<marquee><font color="red"><span style="font-family:'Times New Roman'"><span style="font-size:50px"><b><i>HOT SALE! Từ nay đến hết ngày 19/10/2019. Hãy truy cập và mua hàng với giá ưu đã tại NDShop!!!!Nhanh tay số lượng có hạn</i></b></span></span></font></marquee>
 <div class="header-bottom"><!--header-bottom-->
 			<div class="container">
 				<div class="row">
@@ -34,7 +39,19 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="mainmenu pull-left">
+						<div class="container">
+		<nav id="cavas_menu" class="apollo-megamenu">
+			<div class="" role="navigation">
+				<div class="navbar-header">
+					
+					<button type="button" class="navbar-toggle btn-menu-canvas" data-toggle="offcanvas" data-target="#off-canvas-nav">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="fa fa-bars"></span>
+					</button>
+					
+				</div>
+				<div id="apollo-top-menu" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav megamenu">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="index.html" class="active">Trang chủ</a></li>
 								<li class="dropdown"><a href="#">Danh sách sản phẩm<b class="caret"></b></a>
@@ -60,11 +77,14 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3">
-						<div class="search_box pull-right">
-							<input type="text" placeholder="Search">
-						</div>
-					</div>
+<br>
+<div id="search_block_top" class="">
+	<span id="search-icon" class="fa fa-search" title=""></span>
+	<form id="searchbox" class="popup-content" action="/search" method="get" role="search">
+		<input type="hidden" name="type" value="product">
+		<input id="search_query_top" class="search_query form-control" type="search" name="q" value="" placeholder="Tìm kiếm ..." aria-label="Tìm kiếm ...">
+	</form>
+</div>
 				</div>
 			</div>
 		</div>
@@ -77,48 +97,29 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slider-carousel" data-slide-to="0" class=""></li>
-							<li data-target="#slider-carousel" data-slide-to="1" class="active"></li>
-							<li data-target="#slider-carousel" data-slide-to="2" class=""></li>
-						</ol>
-						
 						<div class="carousel-inner">
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									<h1><span>ND</span>-SHOPPER</h1>
 									<h2>Free E-Commerce Template</h2>
 									<p>Mua đâu cũng phải mất tiền đến với ND-SHOP chúng tôi liền cảm ơn! Thoãi mái mua sắm tại ND-SHOP.</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="">
-									<img src="images/home/pricing.png" class="pricing" alt="">
-								</div>
 							</div>
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									<h1><span>ND</span>-SHOPPER</h1>
 									<h2>100% Responsive Design</h2>
 									<p>Mua đâu cũng phải mất tiền đến với ND-SHOP chúng tôi liền cảm ơn! Thoãi mái mua sắm tại ND-SHOP.</p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="">
-									<img src="images/home/pricing.png" class="pricing" alt="">
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
+									<h1><span>ND</span>-SHOPPER</h1>
 									<h2>Free Ecommerce Template</h2>
 									<p>Mua đâu cũng phải mất tiền đến với ND-SHOP tôi liền cảm ơn! Hãy đến với ND_SHOP để thoải mái mua sắm mà không sợ lố tiền!</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="">
-									<img src="images/home/pricing.png" class="pricing" alt="">
 								</div>
 							</div>
 							
@@ -307,29 +308,6 @@
   	</div>
 						<!--/category-products-->
 					
-						<div class="brands_products"><!--brands_products-->
-							<h2>Brands</h2>
-							<div class="brands-name">
-								<ul class="nav nav-pills nav-stacked">
-									<li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-									<li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-									<li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-									<li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-									<li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-									<li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-									<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-								</ul>
-							</div>
-						</div><!--/brands_products-->
-						
-						<div class="price-range"><!--price-range-->
-							<h2>Price Range</h2>
-							<div class="well text-center">
-								 <div class="slider slider-horizontal" style="width: 174px;"><div class="slider-track"><div class="slider-selection" style="left: 41.6667%; width: 33.3333%;"></div><div class="slider-handle round left-round" style="left: 41.6667%;"></div><div class="slider-handle round" style="left: 75%;"></div></div><div class="tooltip top" style="top: -30px; left: 68.5px;"><div class="tooltip-arrow"></div><div class="tooltip-inner">250 : 450</div></div><input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" style=""></div><br>
-								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-							</div>
-						</div><!--/price-range-->
-						
 						<div class="shipping text-center"><!--shipping-->
 							<img src="images/home/shipping.jpg" alt="">
 						</div><!--/shipping-->
@@ -495,18 +473,19 @@
 						
 					</div><!--features_items-->
 					
+
 					<div class="category-tab"><!--category-tab-->
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
-								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
-								<li><a href="#blazers" data-toggle="tab">Blazers</a></li>
-								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-								<li><a href="#kids" data-toggle="tab">Kids</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Polo shirt</a></li>
+								<li class="active"><a href="#Telephone" data-toggle="tab">Điện thoại</a></li>
+								<li><a href="#headphone" data-toggle="tab">Tai nghe</a></li>
+								<li><a href="#charger" data-toggle="tab">Xạc</a></li>
+								<li><a href="#bag" data-toggle="tab">Ba-lô</a></li>
+								<li><a href="#usb" data-toggle="tab">Usb|Thẻ nhớ</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
-							<div class="tab-pane fade active in" id="tshirt">
+							<div class="tab-pane fade active in" id="Telephone">
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
@@ -891,8 +870,8 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>ND</span>-SHOPPER</h2>
+							<p>Mua đâu cũng phải mất tiền đến với ND-SHOP chúng tôi liền cảm ơn! Thoãi mái mua sắm tại ND-SHOP.</p>
 						</div>
 					</div>
 					<div class="col-sm-7">
