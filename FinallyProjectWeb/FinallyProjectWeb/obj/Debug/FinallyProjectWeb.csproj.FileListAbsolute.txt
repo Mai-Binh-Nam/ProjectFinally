@@ -1,0 +1,138 @@
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.dll.config
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.pdb
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.exe
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.exe.config
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.rsp
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.exe
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.exe.config
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.rsp
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.AppContext.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Collections.Immutable.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Console.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Compression.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.FileSystem.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Pipes.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Reflection.Metadata.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.AccessControl.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Claims.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.ValueTuple.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XPath.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.exe
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.exe.config
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.rsp
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\VBCSCompiler.exe
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\VBCSCompiler.exe.config
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.Web.Infrastructure.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Helpers.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Mvc.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Razor.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Deployment.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Razor.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Razor.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Deployment.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Razor.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Helpers.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Mvc.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csprojAssemblyReference.cache
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csproj.CoreCompileInputs.cache
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csproj.CopyComplete
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.dll
+E:\Năm 3\LAp TrInh wEb\NHóm 3\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.pdb
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.dll.config
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\FinallyProjectWeb.pdb
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.exe
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.exe.config
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csc.rsp
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.exe
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.exe.config
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\csi.rsp
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Console.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.exe
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.exe.config
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\vbc.rsp
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Helpers.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Mvc.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Razor.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Razor.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Razor.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Webpages.Razor.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Helpers.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\System.Web.Mvc.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csprojAssemblyReference.cache
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csproj.CoreCompileInputs.cache
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.csproj.CopyComplete
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.dll
+C:\Users\Binh Nam\Desktop\ProjectFinally\FinallyProjectWeb\FinallyProjectWeb\obj\Debug\FinallyProjectWeb.pdb
