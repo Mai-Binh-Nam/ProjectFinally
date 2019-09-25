@@ -12,5 +12,18 @@ namespace ProjectFinally.Controllers
         {
             return View();
         }
+        public ActionResult Login()
+        {
+            return View("Login");
+        }
+        public ActionResult ForgotPassword()
+        {
+            return View("ForgotPassword");
+        }
+        public ActionResult Register()
+        {
+            return View("Register");
+        }
+         
     }
 }

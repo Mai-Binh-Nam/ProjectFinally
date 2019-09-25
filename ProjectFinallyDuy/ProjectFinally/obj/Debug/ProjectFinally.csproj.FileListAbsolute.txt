@@ -73,4 +73,3 @@ C:\Users\khanh\OneDrive\Desktop\ProjectFinally\ProjectFinally\obj\Debug\ProjectF
 C:\Users\khanh\OneDrive\Desktop\ProjectFinally\ProjectFinally\obj\Debug\ProjectFinally.csproj.CopyComplete
 C:\Users\khanh\OneDrive\Desktop\ProjectFinally\ProjectFinally\obj\Debug\ProjectFinally.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinally\ProjectFinally\obj\Debug\ProjectFinally.pdb
-C:\Users\khanh\OneDrive\Desktop\ProjectFinally\ProjectFinally\obj\Debug\ProjectFinally.csprojAssemblyReference.cache
