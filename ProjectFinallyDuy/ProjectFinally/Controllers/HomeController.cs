@@ -24,6 +24,5 @@ namespace ProjectFinally.Controllers
         {
             return View("Register");
         }
-         
     }
 }
