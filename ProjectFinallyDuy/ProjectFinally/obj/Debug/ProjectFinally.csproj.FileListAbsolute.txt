@@ -123,10 +123,15 @@ C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\roslyn\vbc
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\roslyn\VBCSCompiler.exe
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Antlr3.Runtime.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\ICSharpCode.SharpZipLib.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Microsoft.Owin.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Newtonsoft.Json.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\NPOI.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\NPOI.OOXML.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\NPOI.OpenXml4Net.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\NPOI.OpenXmlFormats.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Owin.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.Helpers.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.Mvc.dll
@@ -136,6 +141,7 @@ C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.WebPages.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.WebPages.Razor.dll
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\WebGrease.dll
+C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\ICSharpCode.SharpZipLib.xml
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\Microsoft.Owin.xml
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.Helpers.xml
 C:\Users\khanh\OneDrive\Desktop\ProjectFinallyDuy1\ProjectFinally\bin\System.Web.Mvc.xml
