@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="WebsiteBanHang1ModelStoreContainer" CdmEntityContainer="WebsiteBanHang1Entities">
+  <EntityContainerMapping StorageEntityContainer="WebsiteBanHang1ModelStoreContainer" CdmEntityContainer="WebsiteBanHang1Entities1">
     <EntitySetMapping Name="CTDHs">
       <EntityTypeMapping TypeName="WebsiteBanHang1Model.CTDH">
         <MappingFragment StoreEntitySet="CTDH">

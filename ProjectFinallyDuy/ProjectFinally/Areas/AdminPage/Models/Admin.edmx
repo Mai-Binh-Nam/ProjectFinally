@@ -278,7 +278,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="WebsiteBanHang1Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WebsiteBanHang1Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CTDHs" EntityType="Self.CTDH" />
           <EntitySet Name="DONHANGs" EntityType="Self.DONHANG" />
           <EntitySet Name="GIANHANGs" EntityType="Self.GIANHANG" />
@@ -307,7 +307,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WebsiteBanHang1ModelStoreContainer" CdmEntityContainer="WebsiteBanHang1Entities">
+        <EntityContainerMapping StorageEntityContainer="WebsiteBanHang1ModelStoreContainer" CdmEntityContainer="WebsiteBanHang1Entities1">
           <EntitySetMapping Name="CTDHs">
             <EntityTypeMapping TypeName="WebsiteBanHang1Model.CTDH">
               <MappingFragment StoreEntitySet="CTDH">

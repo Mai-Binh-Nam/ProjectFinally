@@ -228,8 +228,8 @@
     <Content Include="Areas\AdminPage\Content\js\respond.min.js" />
     <Content Include="Areas\AdminPage\Models\Admin.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Admin.Context.cs</LastGenOutput>
       <DependentUpon>Admin.edmx</DependentUpon>
+      <LastGenOutput>Admin.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Areas\AdminPage\Models\Admin.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -2075,13 +2075,6 @@
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Areas\AdminPage\Views\web.config" />
     <Content Include="Areas\SellerPage\Views\web.config" />
-    <EntityDeploy Include="Areas\AdminPage\Models\Admin.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Areas\AdminPage\Models\Admin.edmx.diagram">
-      <DependentUpon>Admin.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\AdminPage\Views\CustomerInfo\Create.cshtml" />
     <Content Include="Areas\AdminPage\Views\CustomerInfo\Delete.cshtml" />
     <Content Include="Areas\AdminPage\Views\CustomerInfo\Details.cshtml" />
@@ -2105,6 +2098,13 @@
     <Content Include="Areas\AdminPage\Content\sass\styles.scss" />
     <Content Include="Areas\AdminPage\Content\tables\data1.json" />
     <Content Include="Areas\AdminPage\Content\tables\data2.json" />
+    <EntityDeploy Include="Areas\AdminPage\Models\Admin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Areas\AdminPage\Models\Admin.edmx.diagram">
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

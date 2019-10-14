@@ -13,7 +13,7 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
 {
     public class CustomerInfoController : Controller
     {
-        private WebsiteBanHang1Entities db = new WebsiteBanHang1Entities();
+        private WebsiteBanHang1Entities1 db = new WebsiteBanHang1Entities1();
 
         // GET: AdminPage/CustomerInfo
         public ActionResult Index(int? page)

@@ -126,7 +126,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="WebsiteBanHang1Entities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="WebsiteBanHang1Entities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="CTDHs" EntityType="Self.CTDH" />
     <EntitySet Name="DONHANGs" EntityType="Self.DONHANG" />
     <EntitySet Name="GIANHANGs" EntityType="Self.GIANHANG" />

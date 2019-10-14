@@ -13,10 +13,10 @@ namespace ProjectFinally.Areas.AdminPage.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WebsiteBanHang1Entities : DbContext
+    public partial class WebsiteBanHang1Entities1 : DbContext
     {
-        public WebsiteBanHang1Entities()
-            : base("name=WebsiteBanHang1Entities")
+        public WebsiteBanHang1Entities1()
+            : base("name=WebsiteBanHang1Entities1")
         {
         }
     
