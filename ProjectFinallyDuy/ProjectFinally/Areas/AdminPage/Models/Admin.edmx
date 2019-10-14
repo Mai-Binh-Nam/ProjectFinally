@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WebsiteBanHang1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CTDH">
+          <Key>
+            <PropertyRef Name="maCTDH" />
+            <PropertyRef Name="maDH" />
+          </Key>
+          <Property Name="maCTDH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maDH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maSP" Type="char" MaxLength="10" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="color" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="DONHANG">
+          <Key>
+            <PropertyRef Name="maDH" />
+          </Key>
+          <Property Name="maDH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="maTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="emailDH" Type="varchar" MaxLength="50" />
+          <Property Name="sdtDH" Type="int" />
+          <Property Name="diachiDH" Type="nvarchar" MaxLength="100" />
+          <Property Name="trangthaiDH" Type="bit" />
+        </EntityType>
+        <EntityType Name="GIANHANG">
+          <Key>
+            <PropertyRef Name="maGH" />
+          </Key>
+          <Property Name="maGH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="30" />
+          <Property Name="diachiGH" Type="nvarchar" MaxLength="200" />
+          <Property Name="sdt" Type="int" />
+        </EntityType>
+        <EntityType Name="SANPHAM">
+          <Key>
+            <PropertyRef Name="maSP" />
+          </Key>
+          <Property Name="maSP" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="tenSP" Type="nvarchar" MaxLength="200" />
+          <Property Name="motaSP" Type="nvarchar" MaxLength="500" />
+          <Property Name="imageSP" Type="varchar" MaxLength="30" />
+          <Property Name="baohanhSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="soluongSP" Type="int" />
+          <Property Name="dongiaSP" Type="int" />
+          <Property Name="hangsxSP" Type="nvarchar" MaxLength="50" />
+          <Property Name="pheduyet" Type="bit" />
+          <Property Name="maGH" Type="char" MaxLength="10" />
+          <Property Name="color1" Type="varchar" MaxLength="10" />
+          <Property Name="color2" Type="varchar" MaxLength="10" />
+          <Property Name="color3" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TAIKHOAN">
+          <Key>
+            <PropertyRef Name="maTK" />
+          </Key>
+          <Property Name="maTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="20" />
+          <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="fk_CTHD_SANPHAM">
+          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+          <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SANPHAM">
+              <PropertyRef Name="maSP" />
+            </Principal>
+            <Dependent Role="CTDH">
+              <PropertyRef Name="maSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DONHANG_CTHD">
+          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="1" />
+          <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DONHANG">
+              <PropertyRef Name="maDH" />
+            </Principal>
+            <Dependent Role="CTDH">
+              <PropertyRef Name="maDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DONHANG_TAIKHOAN">
+          <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAIKHOAN">
+              <PropertyRef Name="maTK" />
+            </Principal>
+            <Dependent Role="DONHANG">
+              <PropertyRef Name="maTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SANPHAM_GIANHANG">
+          <End Role="GIANHANG" Type="Self.GIANHANG" Multiplicity="0..1" />
+          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANHANG">
+              <PropertyRef Name="maGH" />
+            </Principal>
+            <Dependent Role="SANPHAM">
+              <PropertyRef Name="maGH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebsiteBanHang1ModelStoreContainer">
+          <EntitySet Name="CTDH" EntityType="Self.CTDH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DONHANG" EntityType="Self.DONHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GIANHANG" EntityType="Self.GIANHANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_CTHD_SANPHAM" Association="Self.fk_CTHD_SANPHAM">
+            <End Role="SANPHAM" EntitySet="SANPHAM" />
+            <End Role="CTDH" EntitySet="CTDH" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DONHANG_CTHD" Association="Self.fk_DONHANG_CTHD">
+            <End Role="DONHANG" EntitySet="DONHANG" />
+            <End Role="CTDH" EntitySet="CTDH" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DONHANG_TAIKHOAN" Association="Self.fk_DONHANG_TAIKHOAN">
+            <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+            <End Role="DONHANG" EntitySet="DONHANG" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SANPHAM_GIANHANG" Association="Self.fk_SANPHAM_GIANHANG">
+            <End Role="GIANHANG" EntitySet="GIANHANG" />
+            <End Role="SANPHAM" EntitySet="SANPHAM" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebsiteBanHang1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CTDH">
+          <Key>
+            <PropertyRef Name="maCTDH" />
+            <PropertyRef Name="maDH" />
+          </Key>
+          <Property Name="maCTDH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="maDH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="maSP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="color" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="SANPHAM" Relationship="Self.fk_CTHD_SANPHAM" FromRole="CTDH" ToRole="SANPHAM" />
+          <NavigationProperty Name="DONHANG" Relationship="Self.fk_DONHANG_CTHD" FromRole="CTDH" ToRole="DONHANG" />
+        </EntityType>
+        <EntityType Name="DONHANG">
+          <Key>
+            <PropertyRef Name="maDH" />
+          </Key>
+          <Property Name="maDH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="maTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="emailDH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sdtDH" Type="Int32" />
+          <Property Name="diachiDH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="trangthaiDH" Type="Boolean" />
+          <NavigationProperty Name="CTDHs" Relationship="Self.fk_DONHANG_CTHD" FromRole="DONHANG" ToRole="CTDH" />
+          <NavigationProperty Name="TAIKHOAN" Relationship="Self.fk_DONHANG_TAIKHOAN" FromRole="DONHANG" ToRole="TAIKHOAN" />
+        </EntityType>
+        <EntityType Name="GIANHANG">
+          <Key>
+            <PropertyRef Name="maGH" />
+          </Key>
+          <Property Name="maGH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="diachiGH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sdt" Type="Int32" />
+          <NavigationProperty Name="SANPHAMs" Relationship="Self.fk_SANPHAM_GIANHANG" FromRole="GIANHANG" ToRole="SANPHAM" />
+        </EntityType>
+        <EntityType Name="SANPHAM">
+          <Key>
+            <PropertyRef Name="maSP" />
+          </Key>
+          <Property Name="maSP" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="tenSP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="motaSP" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="imageSP" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="baohanhSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soluongSP" Type="Int32" />
+          <Property Name="dongiaSP" Type="Int32" />
+          <Property Name="hangsxSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pheduyet" Type="Boolean" />
+          <Property Name="maGH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="color1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="color2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="color3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CTDHs" Relationship="Self.fk_CTHD_SANPHAM" FromRole="SANPHAM" ToRole="CTDH" />
+          <NavigationProperty Name="GIANHANG" Relationship="Self.fk_SANPHAM_GIANHANG" FromRole="SANPHAM" ToRole="GIANHANG" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TAIKHOAN">
+          <Key>
+            <PropertyRef Name="maTK" />
+          </Key>
+          <Property Name="maTK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DONHANGs" Relationship="Self.fk_DONHANG_TAIKHOAN" FromRole="TAIKHOAN" ToRole="DONHANG" />
+        </EntityType>
+        <Association Name="fk_CTHD_SANPHAM">
+          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+          <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SANPHAM">
+              <PropertyRef Name="maSP" />
+            </Principal>
+            <Dependent Role="CTDH">
+              <PropertyRef Name="maSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DONHANG_CTHD">
+          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="1" />
+          <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DONHANG">
+              <PropertyRef Name="maDH" />
+            </Principal>
+            <Dependent Role="CTDH">
+              <PropertyRef Name="maDH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_DONHANG_TAIKHOAN">
+          <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+          <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TAIKHOAN">
+              <PropertyRef Name="maTK" />
+            </Principal>
+            <Dependent Role="DONHANG">
+              <PropertyRef Name="maTK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SANPHAM_GIANHANG">
+          <End Role="GIANHANG" Type="Self.GIANHANG" Multiplicity="0..1" />
+          <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GIANHANG">
+              <PropertyRef Name="maGH" />
+            </Principal>
+            <Dependent Role="SANPHAM">
+              <PropertyRef Name="maGH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="WebsiteBanHang1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CTDHs" EntityType="Self.CTDH" />
+          <EntitySet Name="DONHANGs" EntityType="Self.DONHANG" />
+          <EntitySet Name="GIANHANGs" EntityType="Self.GIANHANG" />
+          <EntitySet Name="SANPHAMs" EntityType="Self.SANPHAM" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+          <AssociationSet Name="fk_CTHD_SANPHAM" Association="Self.fk_CTHD_SANPHAM">
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+            <End Role="CTDH" EntitySet="CTDHs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DONHANG_CTHD" Association="Self.fk_DONHANG_CTHD">
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+            <End Role="CTDH" EntitySet="CTDHs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_DONHANG_TAIKHOAN" Association="Self.fk_DONHANG_TAIKHOAN">
+            <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+            <End Role="DONHANG" EntitySet="DONHANGs" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SANPHAM_GIANHANG" Association="Self.fk_SANPHAM_GIANHANG">
+            <End Role="GIANHANG" EntitySet="GIANHANGs" />
+            <End Role="SANPHAM" EntitySet="SANPHAMs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebsiteBanHang1ModelStoreContainer" CdmEntityContainer="WebsiteBanHang1Entities">
+          <EntitySetMapping Name="CTDHs">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.CTDH">
+              <MappingFragment StoreEntitySet="CTDH">
+                <ScalarProperty Name="maCTDH" ColumnName="maCTDH" />
+                <ScalarProperty Name="maDH" ColumnName="maDH" />
+                <ScalarProperty Name="maSP" ColumnName="maSP" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="color" ColumnName="color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DONHANGs">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.DONHANG">
+              <MappingFragment StoreEntitySet="DONHANG">
+                <ScalarProperty Name="maDH" ColumnName="maDH" />
+                <ScalarProperty Name="maTK" ColumnName="maTK" />
+                <ScalarProperty Name="emailDH" ColumnName="emailDH" />
+                <ScalarProperty Name="sdtDH" ColumnName="sdtDH" />
+                <ScalarProperty Name="diachiDH" ColumnName="diachiDH" />
+                <ScalarProperty Name="trangthaiDH" ColumnName="trangthaiDH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GIANHANGs">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.GIANHANG">
+              <MappingFragment StoreEntitySet="GIANHANG">
+                <ScalarProperty Name="maGH" ColumnName="maGH" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="diachiGH" ColumnName="diachiGH" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SANPHAMs">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.SANPHAM">
+              <MappingFragment StoreEntitySet="SANPHAM">
+                <ScalarProperty Name="maSP" ColumnName="maSP" />
+                <ScalarProperty Name="tenSP" ColumnName="tenSP" />
+                <ScalarProperty Name="motaSP" ColumnName="motaSP" />
+                <ScalarProperty Name="imageSP" ColumnName="imageSP" />
+                <ScalarProperty Name="baohanhSP" ColumnName="baohanhSP" />
+                <ScalarProperty Name="soluongSP" ColumnName="soluongSP" />
+                <ScalarProperty Name="dongiaSP" ColumnName="dongiaSP" />
+                <ScalarProperty Name="hangsxSP" ColumnName="hangsxSP" />
+                <ScalarProperty Name="pheduyet" ColumnName="pheduyet" />
+                <ScalarProperty Name="maGH" ColumnName="maGH" />
+                <ScalarProperty Name="color1" ColumnName="color1" />
+                <ScalarProperty Name="color2" ColumnName="color2" />
+                <ScalarProperty Name="color3" ColumnName="color3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TAIKHOANs">
+            <EntityTypeMapping TypeName="WebsiteBanHang1Model.TAIKHOAN">
+              <MappingFragment StoreEntitySet="TAIKHOAN">
+                <ScalarProperty Name="maTK" ColumnName="maTK" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

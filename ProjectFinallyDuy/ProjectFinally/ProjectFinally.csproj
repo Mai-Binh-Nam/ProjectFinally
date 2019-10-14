@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -67,9 +73,17 @@
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -141,6 +155,43 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\AdminPage\AdminPageAreaRegistration.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\AdminPageController.cs" />
+    <Compile Include="Areas\AdminPage\Controllers\CustomerInfoController.cs" />
+    <Compile Include="Areas\AdminPage\Models\Admin.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\Admin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\Admin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\CTDH.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\DONHANG.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\GIANHANG.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\SANPHAM.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\sysdiagram.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AdminPage\Models\TAIKHOAN.cs">
+      <DependentUpon>Admin.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\SellerPage\SellerPageAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -151,6 +202,40 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\AdminPage\Content\css\bootstrap-table.css" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.css" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.min.css" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap.css" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap.min.css" />
+    <Content Include="Areas\AdminPage\Content\css\datepicker.css" />
+    <Content Include="Areas\AdminPage\Content\css\datepicker3.css" />
+    <Content Include="Areas\AdminPage\Content\css\font-awesome.min.css" />
+    <Content Include="Areas\AdminPage\Content\css\styles.css" />
+    <Content Include="Areas\AdminPage\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\AdminPage\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\AdminPage\Content\js\bootstrap-datepicker.js" />
+    <Content Include="Areas\AdminPage\Content\js\bootstrap.js" />
+    <Content Include="Areas\AdminPage\Content\js\bootstrap.min.js" />
+    <Content Include="Areas\AdminPage\Content\js\chart-data.js" />
+    <Content Include="Areas\AdminPage\Content\js\chart.min.js" />
+    <Content Include="Areas\AdminPage\Content\js\custom.js" />
+    <Content Include="Areas\AdminPage\Content\js\easypiechart-data.js" />
+    <Content Include="Areas\AdminPage\Content\js\easypiechart.js" />
+    <Content Include="Areas\AdminPage\Content\js\html5shiv.min.js" />
+    <Content Include="Areas\AdminPage\Content\js\jquery-1.11.1.min.js" />
+    <Content Include="Areas\AdminPage\Content\js\lumino.glyphs.js" />
+    <Content Include="Areas\AdminPage\Content\js\npm.js" />
+    <Content Include="Areas\AdminPage\Content\js\respond.min.js" />
+    <Content Include="Areas\AdminPage\Models\Admin.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Admin.Context.cs</LastGenOutput>
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\AdminPage\Models\Admin.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Admin.edmx</DependentUpon>
+      <LastGenOutput>Admin.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -213,6 +298,7 @@
     <Content Include="Content\js\sb-admin-2.js" />
     <Content Include="Content\js\sb-admin-2.min.js" />
     <Content Include="Content\login.html" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\Pay.html" />
     <Content Include="Content\register.html" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
@@ -1987,6 +2073,38 @@
     <Content Include="Content\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\vendor\jquery\jquery.min.map" />
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Areas\AdminPage\Views\web.config" />
+    <Content Include="Areas\SellerPage\Views\web.config" />
+    <EntityDeploy Include="Areas\AdminPage\Models\Admin.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Areas\AdminPage\Models\Admin.edmx.diagram">
+      <DependentUpon>Admin.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Create.cshtml" />
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Delete.cshtml" />
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Details.cshtml" />
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Edit.cshtml" />
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Views\AdminPage\Index.cshtml" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.css.map" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap.css.map" />
+    <Content Include="Areas\AdminPage\Content\css\bootstrap.min.css.map" />
+    <Content Include="Areas\AdminPage\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\AdminPage\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\AdminPage\Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\AdminPage\Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\AdminPage\Content\fonts\FontAwesome.otf" />
+    <Content Include="Areas\AdminPage\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\AdminPage\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\AdminPage\Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\AdminPage\Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\AdminPage\Content\sass\.sass-cache\deff34d1f5b7167181b556002c25068d6adc024d\styles.scssc" />
+    <Content Include="Areas\AdminPage\Content\sass\styles.scss" />
+    <Content Include="Areas\AdminPage\Content\tables\data1.json" />
+    <Content Include="Areas\AdminPage\Content\tables\data2.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2016,6 +2134,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\AdminPage\Views\Shared\" />
+    <Folder Include="Areas\SellerPage\Controllers\" />
+    <Folder Include="Areas\SellerPage\Models\" />
+    <Folder Include="Areas\SellerPage\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2029,6 +2151,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
