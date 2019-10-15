@@ -16,14 +16,14 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         private WebsiteBanHang1Entities1 db = new WebsiteBanHang1Entities1();
 
         // GET: AdminPage/CustomerInfo
-        public ActionResult Index(int? page)
+        public PartialViewResult Index(int? page)
         {
             if (page == null) page = 1;
             var info = (from l in db.TAIKHOANs
                          select l).OrderBy(x => x.maTK);
             int pageSize = 3;
             int pageNumber = (page ?? 1);
-            return View(info.ToPagedList(pageNumber, pageSize));
+            return PartialView(info.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: AdminPage/CustomerInfo/Details/5
