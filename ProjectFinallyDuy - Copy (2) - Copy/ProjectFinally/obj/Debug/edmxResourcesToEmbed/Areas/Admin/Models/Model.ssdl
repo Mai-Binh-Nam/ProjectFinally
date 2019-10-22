@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebsiteBanHang1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CTDH">
+    <Key>
+      <PropertyRef Name="maCTDH" />
+      <PropertyRef Name="maDH" />
+    </Key>
+    <Property Name="maCTDH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maDH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maSP" Type="char" MaxLength="10" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="color" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DONHANG">
+    <Key>
+      <PropertyRef Name="maDH" />
+    </Key>
+    <Property Name="maDH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="maTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emailDH" Type="varchar" MaxLength="50" />
+    <Property Name="sdtDH" Type="int" />
+    <Property Name="diachiDH" Type="nvarchar" MaxLength="100" />
+    <Property Name="trangthaiDH" Type="bit" />
+  </EntityType>
+  <EntityType Name="GIANHANG">
+    <Key>
+      <PropertyRef Name="maGH" />
+    </Key>
+    <Property Name="maGH" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+    <Property Name="diachiGH" Type="nvarchar" MaxLength="200" />
+    <Property Name="sdt" Type="int" />
+  </EntityType>
+  <EntityType Name="SANPHAM">
+    <Key>
+      <PropertyRef Name="maSP" />
+    </Key>
+    <Property Name="maSP" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="tenSP" Type="nvarchar" MaxLength="200" />
+    <Property Name="motaSP" Type="nvarchar" MaxLength="500" />
+    <Property Name="imageSP" Type="varchar" MaxLength="30" />
+    <Property Name="baohanhSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="soluongSP" Type="int" />
+    <Property Name="dongiaSP" Type="int" />
+    <Property Name="hangsxSP" Type="nvarchar" MaxLength="50" />
+    <Property Name="pheduyet" Type="bit" />
+    <Property Name="maGH" Type="char" MaxLength="10" />
+    <Property Name="color1" Type="varchar" MaxLength="10" />
+    <Property Name="color2" Type="varchar" MaxLength="10" />
+    <Property Name="color3" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="maTK" />
+    </Key>
+    <Property Name="maTK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="20" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="fk_CTHD_SANPHAM">
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="0..1" />
+    <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SANPHAM">
+        <PropertyRef Name="maSP" />
+      </Principal>
+      <Dependent Role="CTDH">
+        <PropertyRef Name="maSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DONHANG_CTHD">
+    <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="1" />
+    <End Role="CTDH" Type="Self.CTDH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONHANG">
+        <PropertyRef Name="maDH" />
+      </Principal>
+      <Dependent Role="CTDH">
+        <PropertyRef Name="maDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_DONHANG_TAIKHOAN">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="DONHANG" Type="Self.DONHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="maTK" />
+      </Principal>
+      <Dependent Role="DONHANG">
+        <PropertyRef Name="maTK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_SANPHAM_GIANHANG">
+    <End Role="GIANHANG" Type="Self.GIANHANG" Multiplicity="0..1" />
+    <End Role="SANPHAM" Type="Self.SANPHAM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GIANHANG">
+        <PropertyRef Name="maGH" />
+      </Principal>
+      <Dependent Role="SANPHAM">
+        <PropertyRef Name="maGH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WebsiteBanHang1ModelStoreContainer">
+    <EntitySet Name="CTDH" EntityType="Self.CTDH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DONHANG" EntityType="Self.DONHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GIANHANG" EntityType="Self.GIANHANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SANPHAM" EntityType="Self.SANPHAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_CTHD_SANPHAM" Association="Self.fk_CTHD_SANPHAM">
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+      <End Role="CTDH" EntitySet="CTDH" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DONHANG_CTHD" Association="Self.fk_DONHANG_CTHD">
+      <End Role="DONHANG" EntitySet="DONHANG" />
+      <End Role="CTDH" EntitySet="CTDH" />
+    </AssociationSet>
+    <AssociationSet Name="fk_DONHANG_TAIKHOAN" Association="Self.fk_DONHANG_TAIKHOAN">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="DONHANG" EntitySet="DONHANG" />
+    </AssociationSet>
+    <AssociationSet Name="fk_SANPHAM_GIANHANG" Association="Self.fk_SANPHAM_GIANHANG">
+      <End Role="GIANHANG" EntitySet="GIANHANG" />
+      <End Role="SANPHAM" EntitySet="SANPHAM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
