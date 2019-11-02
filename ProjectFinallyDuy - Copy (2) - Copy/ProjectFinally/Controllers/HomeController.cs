@@ -29,6 +29,10 @@ namespace ProjectFinally.Controllers
         {
             return View("Login");
         }
+        public ActionResult LoginAdmin()
+        {
+            return View("LoginAdmin");
+        }
         public ActionResult ForgotPassword()
         {
             return View("ForgotPassword");
@@ -57,7 +61,7 @@ namespace ProjectFinally.Controllers
         [HttpPost]
         public ActionResult Submit_Register(Register taiKhoan)
         {
-            SqlConnection cnn = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=WebsiteBanHang;Integrated Security=True");
+            SqlConnection cnn = new SqlConnection(@"Data Source=.;Initial Catalog=WebsiteBanHang;Integrated Security=True");
             if (ModelState.IsValid)
             {
                 try
@@ -115,6 +119,53 @@ namespace ProjectFinally.Controllers
         {
             return View();
         }
-     
+
+        public ActionResult Submit_LoginAD(Login taiKhoanAD)
+
+        {
+
+            if (ModelState.IsValid)
+            {
+                var resulf = db.Admins.Where(p => p.EmailAddress == taiKhoanAD.EmailAddress && p.Password == taiKhoanAD.Password);
+                if (resulf.Count() == 0)
+                {
+                    ModelState.AddModelError("", "Sai mật khẩu hoặc tên đăng nhập!");
+                }
+                else
+                {
+                    Session["Admin"] = "Admin";
+                    return RedirectToAction("Index", "AdminPage/AdminPage");
+                }
+            }
+            return RedirectToAction("LoginAdmin", "Home");
+
+        }
+        public ActionResult ForgotpasswordAccount(ForgotPassword f)
+        {
+            SqlConnection cnn = new SqlConnection(@"Data Source=.;Initial Catalog=WebsiteBanHang;Integrated Security=True");
+            cnn.Open();
+            SqlCommand cmd = cnn.CreateCommand();
+            
+            cmd.CommandText = "select EmailAddress, Password from TKUser where EmailAddress='" +f.EnterEmail+ "'";
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Read();
+            string emailaddress = reader["EmailAddress"].ToString();
+            string password = reader["Password"].ToString();
+            //Cấu hình thông tin mail
+            var mail = new SmtpClient("smtp.gmail.com", 25)
+            {
+                Credentials = new NetworkCredential("ndshop.vn@gmail.com", "ktdlk1721"),
+                EnableSsl = true
+            };
+            //tạo email
+            var message = new MailMessage();
+            message.From = new MailAddress("ndshop.vn@gmail.com");
+            message.To.Add(f.EnterEmail);
+            message.To.Add(new MailAddress(f.EnterEmail));
+            message.Subject = "Mật khẩu mới của bạn là: " + password;
+            mail.Send(message);
+            return View("ForgotPassword");
+        }
     }
+
 }

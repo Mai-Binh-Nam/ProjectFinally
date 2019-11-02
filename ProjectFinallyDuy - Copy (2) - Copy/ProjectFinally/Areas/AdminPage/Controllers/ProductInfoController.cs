@@ -16,8 +16,14 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         private WebsiteBanHangEntities db = new WebsiteBanHangEntities();
 
         // GET: AdminPage/ProductInfo
+        public ActionResult Error()
+        {
+            return View();
+        }
         public PartialViewResult Index(int? page)
         {
+            if (Session["Admin"] == null)
+                return PartialView("Error");
             if (page == null) page = 1;
             var info = (from l in db.sanphams
                         select l).OrderBy(x => x.id);
@@ -29,6 +35,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/ProductInfo/Details/5
         public ActionResult Details(string id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -44,6 +52,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/ProductInfo/Create
         public ActionResult Create()
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             ViewBag.maGH = new SelectList(db.Admins, "Id", "EmailAddress");
             return View();
         }
@@ -55,6 +65,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,ten,motasp,image,thoigianbaohanh,soluongsp,dongiasp,mansx,mausac,size,nosize,daban,maloai,dongiakhuyenmai,ngaydang")] sanpham sANPHAM)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (ModelState.IsValid)
             {
                 db.sanphams.Add(sANPHAM);
@@ -69,6 +81,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/ProductInfo/Edit/5
         public ActionResult Edit(string id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -89,6 +103,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,ten,motasp,image,thoigianbaohanh,soluongsp,dongiasp,mansx,mausac,size,nosize,daban,maloai,dongiakhuyenmai,ngaydang")] sanpham sANPHAM)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (ModelState.IsValid)
             {
                 db.Entry(sANPHAM).State = EntityState.Modified;
@@ -102,6 +118,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/ProductInfo/Delete/5
         public ActionResult Delete(string id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -119,6 +137,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             sanpham sANPHAM = db.sanphams.Find(id);
             db.sanphams.Remove(sANPHAM);
             db.SaveChanges();

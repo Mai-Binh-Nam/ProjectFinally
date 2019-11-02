@@ -24,9 +24,9 @@ namespace ProjectFinally.Models
         public long id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string EmailAdress { get; set; }
         public string Password { get; set; }
         public Nullable<System.DateTime> logingannhat { get; set; }
+        public string EmailAddress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<loaisanpham> loaisanphams { get; set; }

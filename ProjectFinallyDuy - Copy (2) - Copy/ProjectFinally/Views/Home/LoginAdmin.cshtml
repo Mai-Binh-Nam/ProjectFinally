@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login_Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Clean Login Form Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+
+    <!-- css files -->
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/style1.css" rel="stylesheet" />
+</head>
+<body>
+    @model ProjectFinally.DAO.Login
+    <div class="container demo-1">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <h1>LOGIN_ADMIN</h1>
+                <div class="main-agileits">
+                    <!--form-stars-here-->
+                    <div class="form-w3-agile">
+                        <h2>Login Now</h2>
+                        <form action="Submit_LoginAD" method="post">
+                            @Html.ValidationSummary(false)
+                            <div class="form-sub-w3">
+                                <input type="text" name="EmailAddress" placeholder="EmailAddress" required="" />
+                                <br />
+                                @Html.ValidationMessageFor(m => m.EmailAddress)
+                            </div>
+                            <div class="form-sub-w3">
+                                <input type="password" name="Password" placeholder="Password" required="" />
+                                <br />
+                                @Html.ValidationMessageFor(m => m.Password)
+
+                            </div>
+
+                            <div class="submit-w3l">
+                                <input type="submit" value="Login">
+                            </div>
+                        </form>
+                        <div class="social w3layouts">
+                            <div class="heading">
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="social w3layouts">
+                            <div class="clear"></div>
+                            <p class="p-bottom-w3ls">Trang chủ<a @Html.ActionLink("  Click here", "Index", "Home")</a></p>
+                            <div class="clear"></div>
+
+                        </div>
+
+                        <!--//form-ends-here-->
+                    </div><!-- copyright -->
+                    <div class="copyright w3-agile">
+                        <p> Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+                    </div>
+                    <!-- //copyright -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

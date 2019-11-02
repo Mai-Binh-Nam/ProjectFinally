@@ -5,10 +5,10 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="nchar" MaxLength="10" />
-    <Property Name="LastName" Type="nchar" MaxLength="10" />
-    <Property Name="EmailAdress" Type="nchar" MaxLength="10" />
-    <Property Name="Password" Type="nchar" MaxLength="30" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
     <Property Name="logingannhat" Type="smalldatetime" />
   </EntityType>
   <EntityType Name="CTHD">

@@ -56,8 +56,14 @@
                                     </button>
 
                                 </div>
+                                <div class="col-md-3">
+
+                                </div>
+                                
                                 <div id="apollo-top-menu" class="collapse navbar-collapse">
+
                                     <ul class="nav navbar-nav megamenu">
+
                                         <ul class="nav navbar-nav collapse navbar-collapse">
                                             <li><a href="index.html" class="active">Trang chủ</a></li>
                                             <li class="dropdown">
@@ -77,10 +83,9 @@
                                             </li>
                                             <li><a href="checkdonhang.html">Kiểm tra đơn hàng của bạn</a></li>
                                             <li><a href="gui_bao_hanh.html">Gửi bảo hành</a></li>
-                                            <li><a @Html.ActionLink("Đăng nhập", "Login", "HOme") </a></li>
+                                            <li><a @Html.ActionLink("Đăng nhập", "Login", "Home") </a></li>
                                             <li><a @Html.ActionLink("Đăng ký", "Register", "Home") </a></li>
-                                            <li><a href="ban_hang.html">Bán hàng cùng ND-Shop</a></li>
-
+                                            <li><a @Html.ActionLink("Quản trị viên", "LoginAdmin", "Home")</li>
 
                                         </ul>
                                 </div>

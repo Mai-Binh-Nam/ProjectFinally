@@ -4,10 +4,10 @@
     <EntitySetMapping Name="Admins">
       <EntityTypeMapping TypeName="WebsiteBanHangModel.Admin">
         <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="EmailAdress" ColumnName="EmailAdress" />
           <ScalarProperty Name="Password" ColumnName="Password" />
           <ScalarProperty Name="logingannhat" ColumnName="logingannhat" />
         </MappingFragment>

@@ -5,13 +5,13 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FirstName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="LastName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="EmailAdress" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="Password" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="logingannhat" Type="DateTime" Precision="0" />
     <NavigationProperty Name="loaisanphams" Relationship="Self.FK_loaisanpham_Admin" FromRole="Admin" ToRole="loaisanpham" />
     <NavigationProperty Name="sanphams" Relationship="Self.FK_sanpham_Admin" FromRole="Admin" ToRole="sanpham" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="CTHD">
     <Key>

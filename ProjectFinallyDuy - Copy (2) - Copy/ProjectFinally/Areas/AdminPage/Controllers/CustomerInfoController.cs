@@ -13,22 +13,31 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
 {
     public class CustomerInfoController : Controller
     {
+        
+        public ActionResult Error()
+        {
+            return View();
+        }
         private WebsiteBanHangEntities db = new WebsiteBanHangEntities();
-
         // GET: AdminPage/CustomerInfo
+       
         public PartialViewResult Index(int? page)
         {
+            if (Session["Admin"] == null)
+                return PartialView("Error");
             if (page == null) page = 1;
             var info = (from l in db.TKUsers
-                         select l).OrderBy(x => x.Id);
+                            select l).OrderBy(x => x.Id);
             int pageSize = 3;
             int pageNumber = (page ?? 1);
-            return PartialView(info.ToPagedList(pageNumber, pageSize));
+            return PartialView(info.ToPagedList(pageNumber, pageSize));   
         }
 
         // GET: AdminPage/CustomerInfo/Details/5
         public ActionResult Details(int? id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -44,6 +53,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/CustomerInfo/Create
         public ActionResult Create()
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             return View();
         }
 
@@ -54,6 +65,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "maTK,FirstName,LastName,EmailAddress,Password")] TKUser tAIKHOAN)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (ModelState.IsValid)
             {
                 db.TKUsers.Add(tAIKHOAN);
@@ -67,6 +80,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/CustomerInfo/Edit/5
         public ActionResult Edit(int? id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -86,6 +101,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "maTK,FirstName,LastName,EmailAddress,Password")] TKUser tAIKHOAN)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (ModelState.IsValid)
             {
                 db.Entry(tAIKHOAN).State = EntityState.Modified;
@@ -98,6 +115,8 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         // GET: AdminPage/CustomerInfo/Delete/5
         public ActionResult Delete(int? id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -115,6 +134,10 @@ namespace ProjectFinally.Areas.AdminPage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Session["Admin"] == null)
+                return View("Error");
+            if (Session["Admin"] == null)
+                return PartialView("Error");
             TKUser tAIKHOAN = db.TKUsers.Find(id);
             db.TKUsers.Remove(tAIKHOAN);
             db.SaveChanges();

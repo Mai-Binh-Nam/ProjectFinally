@@ -228,12 +228,14 @@
     <Content Include="Areas\AdminPage\Content\js\chart-data.js" />
     <Content Include="Areas\AdminPage\Content\js\chart.min.js" />
     <Content Include="Areas\AdminPage\Content\js\custom.js" />
+    <Content Include="Areas\AdminPage\Content\js\demo-2.js" />
     <Content Include="Areas\AdminPage\Content\js\easypiechart-data.js" />
     <Content Include="Areas\AdminPage\Content\js\easypiechart.js" />
     <Content Include="Areas\AdminPage\Content\js\html5shiv.min.js" />
     <Content Include="Areas\AdminPage\Content\js\jquery-1.11.1.min.js" />
     <Content Include="Areas\AdminPage\Content\js\lumino.glyphs.js" />
     <Content Include="Areas\AdminPage\Content\js\npm.js" />
+    <Content Include="Areas\AdminPage\Content\js\rAF.js" />
     <Content Include="Areas\AdminPage\Content\js\respond.min.js" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\animated.css" />
@@ -370,7 +372,6 @@
     <Content Include="Areas\AdminPage\Views\ProductInfo\Details.cshtml" />
     <Content Include="Areas\AdminPage\Views\ProductInfo\Edit.cshtml" />
     <Content Include="Areas\AdminPage\Views\ProductInfo\Index.cshtml" />
-    <Content Include="Areas\AdminPage\Views\Shared\AdminLayout.cshtml" />
     <Content Include="Areas\AdminPage\Views\web.config" />
     <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.css.map" />
     <Content Include="Areas\AdminPage\Content\css\bootstrap-theme.min.css.map" />
@@ -389,6 +390,10 @@
     <Content Include="Areas\AdminPage\Content\sass\styles.scss" />
     <Content Include="Areas\AdminPage\Content\tables\data1.json" />
     <Content Include="Areas\AdminPage\Content\tables\data2.json" />
+    <Content Include="Areas\AdminPage\Views\Shared\ErrorAdmin.cshtml" />
+    <Content Include="Areas\AdminPage\Views\AdminPage\Error.cshtml" />
+    <Content Include="Areas\AdminPage\Views\CustomerInfo\Error.cshtml" />
+    <Content Include="Areas\AdminPage\Views\ProductInfo\Error.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -420,6 +425,7 @@
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Product_Show.cshtml" />
     <Content Include="Views\Home\Product_Detail.cshtml" />
+    <Content Include="Views\Home\LoginAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
